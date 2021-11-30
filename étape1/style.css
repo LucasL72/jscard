@@ -1,0 +1,100 @@
+/*------------------------------Début Projet Arinfo---------------------*/
+/*-----Licence
+-bootstrap v5.1
+-fontawesome for icons
+- https://fonts.googleapis.com : for theme Roboto
+-https://fonts.gstatic.com
+---*/
+
+/* Global
+===================--------------=========*/
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: 300;
+    word-spacing: 8px;
+}
+
+h1 {
+    color: rgb(154, 230, 4);
+
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 250%;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #009b00;
+    width: 100px;
+    content: "";
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 160%;
+   text-align: center;
+}
+
+h4 {
+    font-size: 125%
+}
+
+p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 5px;
+}
+
+
+
+/* Search-Bar
+============================*/
+.search-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Cards
+============================*/
+.famille-details {
+    background-color: #fff;
+    background-image: linear-gradient(180deg, rgba(6, 138, 1, 0.6), rgba(16, 167, 41, 0.4), rgba(253, 208, 5, 0.4));
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.famille-details img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.famille-details h4 {
+    text-align: center;
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+
+
