@@ -15,7 +15,7 @@ function maListDeCards(ArrayImg) {
     site.appendChild(container)
     container.appendChild(row)
 
-    //for ( )
+    //for (let i = 0; i < .length; i++)
 
     const card = document.createAttribute("div");
     card.setAttribute("class", "card col-md-4")
