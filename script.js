@@ -2,7 +2,7 @@ console.log("Coucou");
 
 // On déclare la const de la page 
 const site = document.getElementById("site")
-const url ="https://pixabay.com/api/?key=24593919-f35a3cff4500072220f9897e2&q=sun+flowers&image_type=photo"
+const url ="https://pixabay.com/api/?key=24593919-f35a3cff4500072220f9897e2&q=sun&image_type=photo"
 
 //  On va chercher l'API
 function getImagePixabay() {
@@ -63,7 +63,7 @@ function maListDeCards(arrayImg) {
 
         const img = document.createElement("img");
         img.setAttribute("class", "card-img-top")
-        img.setAttribute("src", arrayImg[i].userImageURL);
+        img.setAttribute("src", arrayImg[i].previewURL);
 
         const cardBody = document.createElement("div");
         cardBody.setAttribute("class", "card-body")
@@ -81,13 +81,14 @@ function maListDeCards(arrayImg) {
         tags.innerText = "tags: " + arrayImg[i].tags;
 
         const link = document.createElement("a");
-        link.setAttribute("class", "card-text");
+        link.setAttribute("class", "card-text btn btn-primary");
         link.setAttribute("href", arrayImg[i].pageURL);
         link.setAttribute("target", "_blank");
+        link.innerText = "Voir Photos";
 
-        const btn = document.createElement("p");
+        /*const btn = document.createElement("p");
         btn.setAttribute("class", "btn btn-primary");
-        btn.innerText = "Voir Photos";
+        btn.innerText = "Voir Photos";*/
 
         // ON rattache card à notre row
         row.appendChild(card);
@@ -100,7 +101,7 @@ function maListDeCards(arrayImg) {
         cardBody.appendChild(tags);
         cardBody.appendChild(link);
         // on assemble le bouton au lien
-        link.appendChild(btn);
+        //link.appendChild(btn);
     }
 
 }
