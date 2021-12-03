@@ -100,6 +100,7 @@ function maListDeCards(arrayImg) {
         cardBody.appendChild(text);
         cardBody.appendChild(tags);
         cardBody.appendChild(link);
+        
         // on assemble le bouton au lien
         //link.appendChild(btn);
     }
