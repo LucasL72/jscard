@@ -46,8 +46,7 @@ const actions = {
 };
 // ======================================================================
 
-
-async function makeInput() {
+function makeInput() {
 
     // On crée le container
     const container = document.createElement("div");
@@ -83,7 +82,7 @@ async function makeInput() {
 }
 
 
-async function maListDeCards(arrayImg) {
+function maListDeCards(arrayImg) {
     console.log("maListDeCards", arrayImg);
 
     const list = document.getElementById("listCard");
@@ -103,10 +102,12 @@ async function maListDeCards(arrayImg) {
 
     // On crée notre boucle 
     for (let i = 0; i < arrayImg.length; i++) {
+        const colmd4 = document.createElement("div")
+        colmd4.setAttribute("class","col-md-4")
 
         // On construit nos cards + données API
         const card = document.createElement("div");
-        card.setAttribute("class", "card col-md-4")
+        card.setAttribute("class", "card")
 
         const img = document.createElement("img");
         img.setAttribute("class", "card-img-top")
@@ -128,16 +129,14 @@ async function maListDeCards(arrayImg) {
         tags.innerText = "tags: " + arrayImg[i].tags;
 
         const link = document.createElement("a");
-        link.setAttribute("class", "card-text");
+        link.setAttribute("class", "card-text btn btn-primary");
         link.setAttribute("href", arrayImg[i].pageURL);
         link.setAttribute("target", "_blank");
-
-        const btn = document.createElement("p");
-        btn.setAttribute("class", "btn btn-primary");
-        btn.innerText = "Voir Photos";
+        link.innerText = "Voir Photos";
 
         // ON rattache card à notre row
-        row.appendChild(card);
+        row.appendChild(colmd4);
+        colmd4.appendChild(card);
         // On rattache img et le cardBody à notre card
         card.appendChild(img);
         card.appendChild(cardBody);
@@ -147,11 +146,11 @@ async function maListDeCards(arrayImg) {
         cardBody.appendChild(tags);
         cardBody.appendChild(link);
         // on assemble le bouton au lien
-        link.appendChild(btn);
+
     }
 }
 
-async function mounted() {
+function mounted() {
     console.log("Mounted : ");
     makeInput()
 

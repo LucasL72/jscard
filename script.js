@@ -57,9 +57,12 @@ function maListDeCards(arrayImg) {
     // On crée notre boucle 
     for (let i = 0; i < arrayImg.length; i++) {
 
+        const colmd4 = document.createElement("div");
+        colmd4.setAttribute("class","col-md-4");
+
         // On construit nos cards + données API
         const card = document.createElement("div");
-        card.setAttribute("class", "card col-md-4")
+        card.setAttribute("class", "card")
 
         const img = document.createElement("img");
         img.setAttribute("class", "card-img-top")
@@ -91,7 +94,8 @@ function maListDeCards(arrayImg) {
         btn.innerText = "Voir Photos";*/
 
         // ON rattache card à notre row
-        row.appendChild(card);
+        row.appendChild(colmd4);
+        colmd4.appendChild(card);
         // On rattache img et le cardBody à notre card
         card.appendChild(img);
         card.appendChild(cardBody);
