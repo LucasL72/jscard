@@ -108,6 +108,7 @@ function maListDeCards(arrayImg) {
         // On construit nos cards + données API
         const card = document.createElement("div");
         card.setAttribute("class", "card")
+        card.setAttribute("style","width:18rem")
 
         const img = document.createElement("img");
         img.setAttribute("class", "card-img-top")
